@@ -28,7 +28,7 @@ export async function getChatResponse(history = [], userMessage, attachment = nu
   const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone || "UTC";
 
   const chat = getClient().chats.create({
-    model: "gemini-2.0-flash",
+    model: "gemini-3.5-flash",
     history,
     config: {
       systemInstruction: `You are a helpful, premium AI assistant. The current system date is ${dateStr} and the current local time is ${timeStr} (Timezone: ${timeZone}). Use this current date and time context to accurately answer any temporal queries from the user.`
